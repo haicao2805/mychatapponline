@@ -1,7 +1,5 @@
 function joinRoom(roomTitle) {
-    nsSocket.emit("joinRoom", roomTitle, (newNumberOfMembers) => {
-        document.querySelector(".curr-room-num-users").innerHTML = `${newNumberOfMembers} <span class="glyphicon glyphicon-user"></span>`
-    });
+    nsSocket.emit("joinRoom", roomTitle);
 
     nsSocket.on("historyCatchUp", (history) => {
         const message = document.querySelector("#messages");

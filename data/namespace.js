@@ -2,6 +2,7 @@
 const Namespace = require('../class/Namespace');
 const Room = require('../class/Room');
 
+
 // Set up the namespaces
 let namespaces = [];
 let wikiNs = new Namespace(0, 'Wiki', 'https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/103px-Wikipedia-logo-v2.svg.png', '/wiki');
@@ -25,4 +26,4 @@ linuxNs.addRoom(new Room(1, 'Red Hat', 'Linux'));
 linuxNs.addRoom(new Room(2, 'MacOs', 'Linux'));
 linuxNs.addRoom(new Room(3, 'Kernal Development', 'Linux'));
 
-module.exports = namespaces;
+module.exports.namespaces = namespaces;
